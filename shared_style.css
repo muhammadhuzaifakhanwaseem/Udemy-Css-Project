@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    transform: rotate(270deg);
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    right: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  input:checked + .slider {
+    border: 0.3px solid rgba(255, 255, 255, 0.481);
+    background-color: #002d5200;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(-24px);
+    background: white  url('https://i.ibb.co/FxzBYR9/night.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    color: black;
+    transition: all 0.2s;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: all 0.2s;
+}
+
+.main-header {
+    width: 100%;
+    padding: 8px 16px;
+    background: rgb(0, 30, 32);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.595);
+    transition: all 3s;
+    z-index: 99;
+}
+
+.main-header>div {
+    display: inline-block;
+}
+
+.main-nav_item {
+    display: inline-block;
+}
+
+.main-nav_items {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-nav_items a {
+    text-decoration: none;
+    margin: 0px 5px;
+    color: white;
+}
+
+.main-nav_item a:hover {
+    color: rgb(0, 255, 255);
+}
+
+.main-nav_item a:active {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.main-nav {
+    display: inline-block;
+    width: calc(100% - 190px);
+    text-align: right;
+    vertical-align: middle;
+    padding: 15px 0px;
+}
+
+.main_header_brand {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+    transition: all 0.2s ease-in-out;
+    padding: 0px 10px;
+}
+
+.main_header_brand:hover,
+.main_header_brand:active {
+    color: rgb(0, 255, 247);
+}
+
+.main-nav_item-cta a {
+    color: rgb(0, 38, 36);
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.main-nav_item-cta a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 53, 54);
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: inset 0px 0px 2px rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+/* header style end */
+
+/* button style */
+
+.button {
+    padding: 15px 30px;
+    margin: 10px 0px;
+    background-color: rgb(0, 34, 34);
+    color: white;
+    border-radius: 35px;
+    font-weight: bold;
+    border: 0;
+    transition: all 0.2s;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 43, 44);
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px white;
+}
+
+.button:focus {
+    outline: none;
+}
+
+/* footer */
+footer {
+    background-color: rgb(0, 25, 25);
+    width: 100%;
+}
+
+footer nav ul {
+    text-align: center;
+    vertical-align: middle;
+}
+
+footer nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 40px 0px;
+    margin: 0px 16px !important;
+    transition: 0.3s;
+}
+
+footer nav ul li:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.527);
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: white !important;
+}

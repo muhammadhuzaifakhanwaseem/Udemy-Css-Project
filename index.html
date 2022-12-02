@@ -12,9 +12,10 @@
     </head>
     <body onscroll="scroll()">
         <header class="main-header">
-            <div>
+            <div class="mh-div">
                 <a class="main_header_brand" href="./index.html"><img src="./logo-removebg-preview.png" alt="Zinam Technologies"></a>
-            </div><nav class="main-nav">
+            </div>
+            <nav class="main-nav">
                 <ul class="main-nav_items">
                     <li class="main-nav_item">
                         <a class="active" href="./packages.html">Package</a>
@@ -26,14 +27,35 @@
                         <a href="#">Start Hosting</a>
                     </li>
                    
-                    <li class="main-nav_item">
-                        <label id="switch" class="switch">
-                            <input type="checkbox" onclick="thembtn()" id="slider">
-                            <span class="slider round"></span>
-                        </label>
-                    </li>
+                   
                 </ul>
             </nav>
+            <label id="switch" class="switch">
+                <input type="checkbox" onclick="thembtn()" id="slider">
+                <span class="slider round"></span>
+            </label>
+            <div class="container-my" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+              <div class="side">
+                <div class="side-header">
+                    <div>
+                        <a class="main_header_brand" href="./index.html"><img src="./logo-removebg-preview.png" alt="Zinam Technologies"></a>
+                    </div>
+                    
+                </div>
+                <div class="side-items">
+                    <ul>
+                        <li><a href="./packages.html">Packages</a></li>
+                        <li><a href="">Costumers</a></li>
+                        <li class="side-nav-cta">
+                            <a href="#">Start Hosting</a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
         </header>
         <div id="product">
             <h1>
@@ -45,6 +67,7 @@
                 <div class="plan_list">
                     <div class="section-title">
                         <h1>Chose Your Plans</h1>
+                       
                     </div>
                     <article>
                         <h1>Free</h1>
@@ -642,7 +665,7 @@
                                                                     </main>
                                                                     <footer>
                                                                         <nav>
-                                                                            <ul class="m-0 p-0">
+                                                                            <ul class="m-0">
                                                                                 <li>
                                                                                     <a
                                                                                         href="">About</a>
@@ -698,6 +721,15 @@
                 </li>
             </ol>
         </div> -->
+        <script>
+            function thembtn() {
+  let product = document.querySelector("#product");
+  var element = document.body;
+  // toggle
+  product.classList.toggle("product-dark");
+  element.classList.toggle("dark-mode");
+}
+        </script>
                                                                     <script src="./index.js"></script>
                                                                 </body>
                                                             </html>
